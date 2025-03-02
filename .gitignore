@@ -1,3 +1,46 @@
+# Python bytecode
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+virtualenv/
+
+# Environment files
 .env
-.check_env.py
-.debug_env.py
+.env.*
+*.env
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Data files
+*.sqlite3
+*.sqlite3-journal
+*.db
+
+# Compiled output
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Miscellaneous
+.DS_Store
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
