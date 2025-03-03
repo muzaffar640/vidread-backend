@@ -327,3 +327,9 @@ def process_transcript(transcript: str, metadata: Dict, max_tokens_per_chunk: in
     except Exception as e:
         logger.error(f"Error in content processing: {str(e)}")
         raise
+
+if __name__ == "__main__":
+    # For newer Modal versions
+    print("Deploying content processing function to Modal...")
+    modal.run(process_transcript)
+    print("Content processing function deployed!")

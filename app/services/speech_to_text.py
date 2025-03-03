@@ -140,3 +140,8 @@ def transcribe_audio(audio_bytes: bytes, metadata: Dict, chunk_size_mb: int = 25
             'segments': all_segments,
             'duration': duration_sec
         }
+if __name__ == "__main__":
+    # For newer Modal versions
+    print("Deploying speech-to-text function to Modal...")
+    modal.run(transcribe_audio)
+    print("Speech-to-text function deployed!")

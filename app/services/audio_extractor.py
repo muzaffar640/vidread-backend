@@ -96,3 +96,8 @@ def extract_audio(video_url: str, output_format: str = "mp3") -> Dict:
         except Exception as e:
             logger.error(f"Error extracting audio: {str(e)}")
             raise
+if __name__ == "__main__":
+    # For newer Modal versions
+    print("Deploying audio extraction function to Modal...")
+    modal.run(extract_audio)
+    print("Audio extraction function deployed!")

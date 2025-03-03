@@ -35,16 +35,17 @@ class DatabaseManager:
         Sets up database collections and their indexes.
         This ensures our database is properly structured.
         """
-        # Videos collection
-        await self._db.videos.create_index([("video_id", 1)], unique=True)
-        await self._db.videos.create_index([("title", "text")])
+        # Books collection
+        await self._db.books.create_index([("source_video.id", 1)], unique=True)
+        await self._db.books.create_index([
+            ("title", "text"),
+            ("summary", "text"),
+            ("key_themes", "text")
+        ])
         
-        # Categories collection
-        await self._db.categories.create_index([("name", 1)], unique=True)
-        await self._db.categories.create_index([("slug", 1)], unique=True)
-        
-        # Channels collection
-        await self._db.channels.create_index([("channel_id", 1)], unique=True)
+        # Processing errors collection
+        await self._db.processing_errors.create_index([("video_url", 1)])
+        await self._db.processing_errors.create_index([("created_at", -1)])
     
     @property
     def db(self):

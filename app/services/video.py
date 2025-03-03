@@ -19,7 +19,9 @@ class VideoService:
     """Service for video processing pipeline."""
     
     def __init__(self):
-        self.modal_client = modal.Client()
+        # We don't need to instantiate a Modal client explicitly
+        # The remote functions are imported through modal_functions.py
+        pass
     
     def _extract_video_id(self, video_url: str) -> str:
         """Extract video ID from YouTube URL."""
