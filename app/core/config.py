@@ -5,13 +5,13 @@ from functools import lru_cache
 
 class Settings(BaseSettings):
     # Project metadata
-    PROJECT_NAME: str = "VidRead"
+    PROJECT_NAME: str = "YTBook"
     VERSION: str = "0.1.0"
     API_V1_STR: str = "/api/v1"
     
     # MongoDB settings
     MONGODB_URL: str
-    DATABASE_NAME: str = "vidread"
+    DATABASE_NAME: str = "ytbook"
     
     # Security settings
     SECRET_KEY: str
@@ -21,8 +21,8 @@ class Settings(BaseSettings):
     # Modal.ai settings
     MODAL_TOKEN: Optional[str] = None
     
-    # YouTube API settings
-    YOUTUBE_API_KEY: Optional[str] = None
+    # OpenAI settings
+    OPENAI_API_KEY: Optional[str] = None
     
     class Config:
         env_file = ".env"

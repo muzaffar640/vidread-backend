@@ -6,6 +6,8 @@ pydantic==2.6.1
 pydantic-settings==2.1.0
 python-dotenv==1.0.0
 modal==0.73.72
-pytube==15.0.0
+yt-dlp==2023.11.16
+pydub==0.25.1
+openai==1.14.0
 python-jose==3.3.0
-google-api-python-client==2.115.0
+tiktoken==0.5.2
